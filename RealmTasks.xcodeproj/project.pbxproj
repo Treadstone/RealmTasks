@@ -11,7 +11,26 @@
 		A015E5E51DA24594003221FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A015E5E41DA24594003221FB /* ViewController.swift */; };
 		A015E5EA1DA24594003221FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A015E5E91DA24594003221FB /* Assets.xcassets */; };
 		A015E5ED1DA24594003221FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A015E5EB1DA24594003221FB /* LaunchScreen.storyboard */; };
+		A015E5F71DA2483C003221FB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A015E5F51DA2483C003221FB /* Realm.framework */; };
+		A015E5F81DA2483C003221FB /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A015E5F51DA2483C003221FB /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A015E5F91DA2483C003221FB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A015E5F61DA2483C003221FB /* RealmSwift.framework */; };
+		A015E5FA1DA2483C003221FB /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A015E5F61DA2483C003221FB /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A015E5FB1DA2483C003221FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A015E5FA1DA2483C003221FB /* RealmSwift.framework in Embed Frameworks */,
+				A015E5F81DA2483C003221FB /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A015E5DF1DA24594003221FB /* RealmTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +40,8 @@
 		A015E5EC1DA24594003221FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A015E5EE1DA24594003221FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A015E5F41DA2467D003221FB /* RealmTasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTasks.entitlements; sourceTree = "<group>"; };
+		A015E5F51DA2483C003221FB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		A015E5F61DA2483C003221FB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A015E5F91DA2483C003221FB /* RealmSwift.framework in Frameworks */,
+				A015E5F71DA2483C003221FB /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +60,8 @@
 		A015E5D61DA24593003221FB = {
 			isa = PBXGroup;
 			children = (
+				A015E5F51DA2483C003221FB /* Realm.framework */,
+				A015E5F61DA2483C003221FB /* RealmSwift.framework */,
 				A015E5E11DA24594003221FB /* RealmTasks */,
 				A015E5E01DA24594003221FB /* Products */,
 			);
@@ -73,6 +98,7 @@
 				A015E5DB1DA24593003221FB /* Sources */,
 				A015E5DC1DA24593003221FB /* Frameworks */,
 				A015E5DD1DA24593003221FB /* Resources */,
+				A015E5FB1DA2483C003221FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +282,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmTasks/RealmTasks.entitlements;
 				DEVELOPMENT_TEAM = 2F44PLUEMS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmTasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.agtlucas.RealmTasks;
@@ -270,6 +300,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmTasks/RealmTasks.entitlements;
 				DEVELOPMENT_TEAM = 2F44PLUEMS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmTasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.agtlucas.RealmTasks;
